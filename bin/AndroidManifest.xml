@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+    package="com.zahdoo.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="9" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<!--     <uses-permission android:name="android.permission.ACCOUNT_MANAGER" /> -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+	
+	 <!-- GCM connects to Internet Services. -->
+<!--     <uses-permission android:name="android.permission.INTERNET" /> -->
+ 
+    <!-- GCM requires a Google account. -->
+<!--     <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+ 
+    <!-- Keeps the processor from sleeping when a message is received. -->
+<!--     <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+ 
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.zahdoo.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+ 
+    <uses-permission android:name="com.zahdoo.android.permission.C2D_MESSAGE" />
+ 
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+ 
+    <!-- Network State Permissions to detect Internet status -->
+<!--     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+ 
+    <!-- Permission to vibrate -->
+<!--     <uses-permission android:name="android.permission.VIBRATE" /> -->
+
+    
+	 
+	<!-- ADM uses WAKE_LOCK to keep the processor from sleeping when a message is received. -->
+<!-- 	<uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+
+    
+    
+    
+    <application
+        android:icon="@drawable/zicon"
+        android:label="CADIE" >
+          
+         
+        <activity
+            android:name=".CADIENativeActivity"
+            android:label="CADIE" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+        		<action android:name="android.intent.action.VIEW" />
+        		<category android:name="android.intent.category.DEFAULT" />
+    		</intent-filter>
+        </activity>
+        
+        <receiver android:name="com.zahdoo.android.extension.alarm.ActivateAlarm" />
+        
+<!--         <receiver android:name="com.zahdoo.android.extension.alarm.SnoozeAlarm" android:process=":remote" android:enabled="true"/> -->
+        
+        <receiver android:name="com.zahdoo.android.extension.alarm.ReActivateOnBoot" 
+   			android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        
+        <activity
+            android:name="com.zahdoo.android.extension.alarm.SnoozeAlarm"
+            android:theme="@android:style/Theme.NoDisplay" 
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true"/>
+
+        <activity
+            android:name="com.zahdoo.android.extension.alarm.SetAlarmActivity"
+            android:theme="@android:style/Theme.NoDisplay" />
+        
+        <activity
+            android:name="com.zahdoo.android.extension.alarm.AlarmActivity"
+            android:theme="@android:style/Theme.NoDisplay" 
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.zahdoo.android.extension.voiceinput.VoiceRecognition"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.zahdoo.android.extension.voiceinput.VoiceResultTTS"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.zahdoo.android.extension.voiceinput.ReadMessage"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.zahdoo.android.extension.camera.BuiltInCamera" 
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        
+         <activity
+            android:name="com.zahdoo.android.extension.camera.BuiltInAttachment"
+			android:configChanges="keyboardHidden|orientation|screenSize"/>
+         
+        
+         <!-- SendMessage Activity -->
+<!--          <activity -->
+<!--             android:name="com.zahdoo.android.extension.GCM.SendMessageActivity" -->
+<!-- 			android:theme="@android:style/Theme.NoDisplay" /> -->
+         
+         <!-- SendMessage Service -->
+         <service android:name="com.zahdoo.android.extension.GCM.SendMessageService" />
+         
+         <!-- DownloadProfilePic Service -->
+         <service android:name="com.zahdoo.android.extension.toastmessage.DownloadProfilePicService" />
+         
+          <!-- FileTransfer Activity -->
+<!--          <activity -->
+<!--             android:name="com.zahdoo.android.extension.GCM.FileTransferActivity" -->
+<!-- 			android:theme="@android:style/Theme.NoDisplay" /> -->
+        <service android:name="com.zahdoo.android.extension.GCM.FileTransferService" />
+         
+         
+        <!-- Register Activity -->
+<!--         <activity -->
+<!--             android:name="com.zahdoo.android.extension.GCM.RegisterActivity" -->
+<!--             android:theme="@android:style/Theme.NoDisplay"  > -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.VIEW" /> -->
+<!--                 <action android:name="android.intent.action.DELETE" /> -->
+<!--                 <category android:name="android.intent.category.DEFAULT" />  -->
+<!--                 <data android:scheme="com.idrivecare.familypro" /> -->
+<!--             </intent-filter> -->
+<!--         </activity> -->
+         
+        
+<!--         Will be fired when app version is changed -->
+        <receiver android:name="com.zahdoo.android.extension.GCM.AppUpdateBroadcastReceiver">
+		    <intent-filter>
+		        <action android:name="android.intent.action.PACKAGE_REPLACED" />
+		        <data android:path="air.com.zahdoo.cadie"
+		              android:scheme="package" />
+		    </intent-filter>
+		</receiver>
+		
+        <service android:name="com.zahdoo.android.extension.GCM.AppUpdateIntentService" />
+		
+        <receiver
+            android:name="com.zahdoo.android.extension.GCM.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" 
+            android:exported="true">
+            <intent-filter>
+ 
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+ 
+                <category android:name="com.zahdoo.android.extension.GCM" />
+            </intent-filter>
+        </receiver>
+ 
+    	<service android:name="com.zahdoo.android.extension.GCM.GCMIntentService" />
+        
+        
+        <activity android:name="com.dropbox.sync.android.DbxAuthActivity" />
+					<activity
+						android:name="com.dropbox.client2.android.AuthActivity"
+					  	android:launchMode="singleTask" >
+					  	<intent-filter>
+					    	<data android:scheme="db-prczwslrmf45l1a" />
+					    	<action android:name="android.intent.action.VIEW" />
+					    	<category android:name="android.intent.category.BROWSABLE" />
+					    	<category android:name="android.intent.category.DEFAULT" />
+					  	</intent-filter>
+					</activity>
+					<service
+					  	android:name="com.dropbox.sync.android.DbxSyncService"
+					  	android:enabled="true"
+					  	android:exported="false"
+					  	android:label="Dropbox Sync" />
+					
+        <activity
+            android:name="com.zahdoo.android.extension.openPDF.OpenPDF"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.zahdoo.android.extension.voiceinput.VoiceResponse"
+            android:theme="@android:style/Theme.NoDisplay" />
+<!--         <activity -->
+<!--             android:name="com.zahdoo.android.extension.location.Location" -->
+<!--             android:theme="@android:style/Theme.NoDisplay" /> -->
+<!--         <activity -->
+<!--             android:name="com.zahdoo.android.extension.recommendations.RecommendationSearch" -->
+<!--             android:theme="@android:style/Theme.NoDisplay" /> -->
+
+			<service android:name="com.zahdoo.android.extension.recommendations.RecommendationSearchService" />
+
+        <activity
+            android:name="com.zahdoo.android.extension.alarm.RestartActivity"
+            android:theme="@android:style/Theme.NoDisplay" />
+        
+        <activity android:name="com.zahdoo.android.extension.alarm.OnAlarmAnsweredActivity"
+		        	android:configChanges="keyboardHidden|orientation|screenSize"
+           			android:theme="@android:style/Theme.NoDisplay"/>
+        
+<!--         <activity -->
+<!--             android:name="com.zahdoo.android.extension.GCM.RetrieveNoteActivity" -->
+<!--             android:theme="@android:style/Theme.NoDisplay" /> -->
+
+ 		<service android:name="com.zahdoo.android.extension.GCM.RetrieveNoteService" />
+ 		
+ 		
+ 		<service android:name="com.zahdoo.android.extension.location.LocationCheckService" />
+ 		
+ 		<receiver android:name="com.zahdoo.android.extension.location.ActivateLocation" />
+ 		
+ 		<receiver android:name="com.zahdoo.android.extension.location.LocationReceiverOnBoot" 
+   			android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        
+        <meta-data android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
+ 
+    </application>
+
+</manifest>

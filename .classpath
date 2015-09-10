@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/aws-android-sdk-2.0.5-core.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/aws-android-sdk-2.0.5-s3.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/commons-codec-1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/gdata-client-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/gdata-client-meta-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/gdata-core-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/google-play-services.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/gson-2.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/MyCadie/MYCadieProjects/CADIE_ANE_Native_09_Apr/libs/guava-r07.jar"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="C:/Program Files/Adobe/Adobe Flash Builder 4.6/sdks/4.6.0/lib/android/FlashRuntimeExtensions.jar"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

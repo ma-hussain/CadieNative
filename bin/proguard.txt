@@ -1,0 +1,90 @@
+# view AndroidManifest.xml #generated:194
+-keep class com.dropbox.client2.android.AuthActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:193
+-keep class com.dropbox.sync.android.DbxAuthActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:204
+-keep class com.dropbox.sync.android.DbxSyncService { <init>(...); }
+
+# view AndroidManifest.xml #generated:72
+-keep class com.zahdoo.android.CADIENativeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:165
+-keep class com.zahdoo.android.extension.GCM.AppUpdateBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:173
+-keep class com.zahdoo.android.extension.GCM.AppUpdateIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:144
+-keep class com.zahdoo.android.extension.GCM.FileTransferService { <init>(...); }
+
+# view AndroidManifest.xml #generated:175
+-keep class com.zahdoo.android.extension.GCM.GCMBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:190
+-keep class com.zahdoo.android.extension.GCM.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:237
+-keep class com.zahdoo.android.extension.GCM.RetrieveNoteService { <init>(...); }
+
+# view AndroidManifest.xml #generated:135
+-keep class com.zahdoo.android.extension.GCM.SendMessageService { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.zahdoo.android.extension.alarm.ActivateAlarm { <init>(...); }
+
+# view AndroidManifest.xml #generated:106
+-keep class com.zahdoo.android.extension.alarm.AlarmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:229
+-keep class com.zahdoo.android.extension.alarm.OnAlarmAnsweredActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:89
+-keep class com.zahdoo.android.extension.alarm.ReActivateOnBoot { <init>(...); }
+
+# view AndroidManifest.xml #generated:225
+-keep class com.zahdoo.android.extension.alarm.RestartActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:102
+-keep class com.zahdoo.android.extension.alarm.SetAlarmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:96
+-keep class com.zahdoo.android.extension.alarm.SnoozeAlarm { <init>(...); }
+
+# view AndroidManifest.xml #generated:124
+-keep class com.zahdoo.android.extension.camera.BuiltInAttachment { <init>(...); }
+
+# view AndroidManifest.xml #generated:120
+-keep class com.zahdoo.android.extension.camera.BuiltInCamera { <init>(...); }
+
+# view AndroidManifest.xml #generated:242
+-keep class com.zahdoo.android.extension.location.ActivateLocation { <init>(...); }
+
+# view AndroidManifest.xml #generated:240
+-keep class com.zahdoo.android.extension.location.LocationCheckService { <init>(...); }
+
+# view AndroidManifest.xml #generated:244
+-keep class com.zahdoo.android.extension.location.LocationReceiverOnBoot { <init>(...); }
+
+# view AndroidManifest.xml #generated:210
+-keep class com.zahdoo.android.extension.openPDF.OpenPDF { <init>(...); }
+
+# view AndroidManifest.xml #generated:223
+-keep class com.zahdoo.android.extension.recommendations.RecommendationSearchService { <init>(...); }
+
+# view AndroidManifest.xml #generated:138
+-keep class com.zahdoo.android.extension.toastmessage.DownloadProfilePicService { <init>(...); }
+
+# view AndroidManifest.xml #generated:117
+-keep class com.zahdoo.android.extension.voiceinput.ReadMessage { <init>(...); }
+
+# view AndroidManifest.xml #generated:111
+-keep class com.zahdoo.android.extension.voiceinput.VoiceRecognition { <init>(...); }
+
+# view AndroidManifest.xml #generated:213
+-keep class com.zahdoo.android.extension.voiceinput.VoiceResponse { <init>(...); }
+
+# view AndroidManifest.xml #generated:114
+-keep class com.zahdoo.android.extension.voiceinput.VoiceResultTTS { <init>(...); }
+
